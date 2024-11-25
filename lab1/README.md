@@ -68,15 +68,6 @@ All packages are up to date.
 ## 3. Настроить системный монитор для контроля параметров
 Установим программу для просмотра состояния операционной системы
 ```shell
-docker container run -d -p 8080:8080 -it --name ubuntu --rm ubuntu:22.04
-```
-```commandline
-CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          PORTS                                       NAMES
-f3ea897d248f   ubuntu:22.04   "/bin/bash"   37 seconds ago   Up 35 seconds   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   ubuntu
-```
-
-
-```shell
 apt install htop
 ```
 ```commandline
@@ -267,10 +258,11 @@ MAC address is: **:**:**:**:**:**
 ```
 Для имитации сетевой активности запустим ubuntu с открытым внешнем портом, по которому можно запросить сервер.
 ```shell
-
+docker container run -d -p 8080:8080 -it --name ubuntu --rm ubuntu:22.04
 ```
 ```commandline
-
+CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS          PORTS                                       NAMES
+f3ea897d248f   ubuntu:22.04   "/bin/bash"   37 seconds ago   Up 35 seconds   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp   ubuntu
 ```
 Перейдем в созданный контейнер. По аналогии с пунктом 2.
 Заново обновим apt и установим iftop, т.к. в новом контейнере все чистого листа.
