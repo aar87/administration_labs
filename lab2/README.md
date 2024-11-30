@@ -58,7 +58,7 @@ service nginx start
 root@5f6ba7f75739:/# service nginx start 
  * Starting nginx nginx 
 ```
-Сервис запущем и для проверки можно использовать знакомый из первой лабораторной инструмент CURL.
+Сервис запущен и для проверки можно использовать знакомый из первой лабораторной инструмент CURL.
 ```shell
 curl http://localhost
 ```
