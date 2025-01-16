@@ -33,7 +33,7 @@ docker ps
 CONTAINER ID   IMAGE      COMMAND                  CREATED              STATUS              PORTS      NAMES
 0c75708475ff   postgres   "docker-entrypoint.s…"   About a minute ago   Up About a minute   5432/tcp   storage
 ```
-Проверим логи созданного контейнера с базо данных
+Проверим логи созданного контейнера с базой данных
 ```shell
 docker logs storage
 ```
